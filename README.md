@@ -398,13 +398,43 @@ isort .
 
 ---
 
+## 🔒 **Security & Configuration**
+
+### **Environment Variables**
+The system uses environment variables for secure configuration:
+
+1. **Copy environment template**:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Configure your API keys** in `.env`:
+   ```bash
+   # OpenWeatherMap API
+   OPENWEATHER_API_KEY=your_api_key_here
+   
+   # NASA Earthdata
+   NASA_USERNAME=your_username
+   NASA_PASSWORD=your_password
+   ```
+
+3. **Never commit `.env` files** to version control
+
+### **Security Features**
+- ✅ **API Key Protection**: All secrets stored in environment variables
+- ✅ **Git Ignore**: Sensitive files automatically excluded
+- ✅ **No Hardcoded Secrets**: Configuration loaded securely
+- ✅ **Security Validation**: Run `python security_check.py` to verify
+
 ## 🚀 **Get Started Now!**
 
 Ready to build your own air quality prediction system? Follow our quick start guide:
 
 1. **Install Dependencies**: `python install_packages.py`
-2. **Run Demo**: `python simple_demo.py`
-3. **Full System**: `python main_no_tensorflow.py`
+2. **Configure Environment**: Copy `.env.example` to `.env` and add your API keys
+3. **Run Demo**: `python simple_demo.py`
+4. **Full System**: `python main_no_tensorflow.py`
+5. **Security Check**: `python security_check.py`
 
 **Remember**: This system uses only free APIs and datasets. No payment required!
 

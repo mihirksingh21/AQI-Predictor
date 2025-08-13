@@ -1,17 +1,22 @@
 # Configuration file for AQI Prediction System
 # All APIs and datasets used are FREE
 
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 # API Keys (FREE APIs - No payment required)
 # OpenWeatherMap API - Free tier: 1000 calls/day
-OPENWEATHER_API_KEY = "90e6f251f99d2234b6f5bb87fa562f91"
-
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "YOUR_OPENWEATHER_API_KEY")
 
 # NASA Earthdata - Completely free, just need to register
-NASA_USERNAME = "ms6624"  # Register at: https://urs.earthdata.nasa.gov/
-NASA_PASSWORD = "2RSs,t)pYZt8kSQ"
+NASA_USERNAME = os.getenv("NASA_USERNAME", "YOUR_NASA_USERNAME")
+NASA_PASSWORD = os.getenv("NASA_PASSWORD", "YOUR_NASA_PASSWORD")
 
 # OpenAQ API - Completely free, no API key required
-OPENAQ_BASE_URL = "https://api.openaq.org/v2"
+OPENAQ_BASE_URL = os.getenv("OPENAQ_BASE_URL", "https://api.openaq.org/v2")
 
 # Default city for predictions
 DEFAULT_CITY = "Delhi"
