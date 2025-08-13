@@ -45,7 +45,7 @@ A comprehensive, production-ready air quality prediction system that uses satell
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Data Sources  │    │  Preprocessing  │    │  ML/DL Models   │
 │                 │    │                 │    │                 │
-│ • OpenAQ API    │───▶│ • Data Cleaning │───▶│ • CNN-LSTM      │
+│ • OpenAQ API    │──▶│ • Data Cleaning │───▶│ • CNN-LSTM      │
 │ • Weather API   │    │ • Feature Eng.  │    │ • Random Forest │
 │ • Satellite     │    │ • Normalization │    │ • Gradient Boost│
 │ • IoT Sensors   │    │ • Sequence Gen. │    │ • SVR           │
