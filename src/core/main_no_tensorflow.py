@@ -12,10 +12,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Import our modules
-from data_collector import DataCollector
-from data_preprocessor import DataPreprocessor
-from visualization import AQIVisualizer
-from config import *
+from src.data.data_collector import DataCollector
+from src.data.data_preprocessor import DataPreprocessor
+from src.visualization.visualization import AQIVisualizer
+from config.config import *
 
 class AQIPredictionSystemNoTF:
     def __init__(self):

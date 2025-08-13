@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder
 from sklearn.impute import SimpleImputer
 import warnings
 warnings.filterwarnings('ignore')
-from config import *
+from config.config import *
 
 class DataPreprocessor:
     def __init__(self):

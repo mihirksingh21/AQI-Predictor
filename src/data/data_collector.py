@@ -14,7 +14,7 @@ from PIL import Image
 import rasterio
 from rasterio.plot import show
 import earthaccess
-from config import *
+from config.config import *
 
 class DataCollector:
     def __init__(self):

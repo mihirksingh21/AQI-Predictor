@@ -405,10 +405,10 @@ The system uses environment variables for secure configuration:
 
 1. **Copy environment template**:
    ```bash
-   cp .env.example .env
+   cp config/.env.example config/.env
    ```
 
-2. **Configure your API keys** in `.env`:
+2. **Configure your API keys** in `config/.env`:
    ```bash
    # OpenWeatherMap API
    OPENWEATHER_API_KEY=your_api_key_here
@@ -424,17 +424,17 @@ The system uses environment variables for secure configuration:
 - ✅ **API Key Protection**: All secrets stored in environment variables
 - ✅ **Git Ignore**: Sensitive files automatically excluded
 - ✅ **No Hardcoded Secrets**: Configuration loaded securely
-- ✅ **Security Validation**: Run `python security_check.py` to verify
+- ✅ **Security Validation**: Run `python scripts/security_check.py` to verify
 
 ## 🚀 **Get Started Now!**
 
 Ready to build your own air quality prediction system? Follow our quick start guide:
 
-1. **Install Dependencies**: `python install_packages.py`
-2. **Configure Environment**: Copy `.env.example` to `.env` and add your API keys
-3. **Run Demo**: `python simple_demo.py`
-4. **Full System**: `python main_no_tensorflow.py`
-5. **Security Check**: `python security_check.py`
+1. **Install Dependencies**: `python scripts/install_packages.py`
+2. **Configure Environment**: Copy `config/.env.example` to `config/.env` and add your API keys
+3. **Run Demo**: `python examples/simple_demo.py`
+4. **Full System**: `python main.py`
+5. **Security Check**: `python scripts/security_check.py`
 
 **Remember**: This system uses only free APIs and datasets. No payment required!
 

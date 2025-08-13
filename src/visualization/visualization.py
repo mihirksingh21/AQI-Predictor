@@ -13,7 +13,7 @@ import numpy as np
 import folium
 from folium import plugins
 import os
-from config import *
+from config.config import *
 
 class AQIVisualizer:
     def __init__(self):

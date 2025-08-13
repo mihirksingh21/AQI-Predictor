@@ -16,7 +16,7 @@ from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import joblib
 import os
-from config import *
+from config.config import *
 
 class AQIPredictionModels:
     def __init__(self):

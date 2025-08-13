@@ -16,10 +16,10 @@ def show_setup_summary():
     
     # Check security files
     security_files = {
-        '.env': 'Environment variables file (contains your API keys)',
-        '.env.example': 'Template file for other developers',
+        'config/.env': 'Environment variables file (contains your API keys)',
+        'config/.env.example': 'Template file for other developers',
         '.gitignore': 'Git ignore file (protects sensitive data)',
-        'security_check.py': 'Security validation script'
+        'scripts/security_check.py': 'Security validation script'
     }
     
     for file, description in security_files.items():
@@ -33,11 +33,11 @@ def show_setup_summary():
     print("-" * 50)
     
     try:
-        import config
-        print("✅ config.py - Successfully loads environment variables")
+        import config.config
+        print("✅ config/config.py - Successfully loads environment variables")
         print("✅ No hardcoded secrets in configuration")
     except Exception as e:
-        print(f"❌ config.py - Error: {e}")
+        print(f"❌ config/config.py - Error: {e}")
     
     # Show what's protected
     print("\n🛡️  PROTECTED DATA:")
@@ -99,7 +99,7 @@ def show_setup_summary():
     print("\n📊 FILE SIZES (for reference):")
     print("-" * 50)
     
-    files_to_check = ['.env', '.env.example', '.gitignore', 'config.py']
+    files_to_check = ['config/.env', 'config/.env.example', '.gitignore', 'config/config.py']
     for file in files_to_check:
         if os.path.exists(file):
             size = os.path.getsize(file)
